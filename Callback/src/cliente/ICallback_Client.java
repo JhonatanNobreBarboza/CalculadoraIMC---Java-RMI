@@ -3,13 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package client;
+package cliente;
+
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 
 /**
  *
  * @author jhonatan
  */
-public interface ICalculadoraIMC extends java.rmi.Remote{
-    public double altura(double altura) throws java.rmi.RemoteException;
-    public double peso(double peso) throws java.rmi.RemoteException;
+public interface ICallback_Client extends Remote{
+    public String mensagem(String nome, String mensagem) throws RemoteException;
+    
 }
